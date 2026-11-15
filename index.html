@@ -1,0 +1,39 @@
+<title>Светлячок</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600&family=Unbounded:wght@600;700&display=swap">
+<style>
+/* Layout: one-screen night game, centered playfield with a compact control row and credits beneath. Single committed dark look. */
+:root {
+  --night: #0b1622;
+  --marsh: #12303a;
+  --reed: #2f6b55;
+  --reed-dark: #1d4a3d;
+  --cattail: #7a4b2a;
+  --glow: #f4d35e;
+  --mist: #9fb8c2;
+  --ink: #eaf3f0;
+  --panel: rgba(11, 22, 34, 0.78);
+  --font-display: "Unbounded", "Arial Black", system-ui, sans-serif;
+  --font-body: "Onest", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: dark;
+}
+html, body { height: 100%; }
+body {
+  background: var(--night);
+  color: var(--ink);
+  font-family: var(--font-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  overflow-x: hidden;
+}
+.stage {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 9 / 14;
+  max-height: calc(100vh - 150px);
